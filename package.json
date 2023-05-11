@@ -1,0 +1,32 @@
+{
+  "name": "desafio6",
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.1.3",
+    "nodemon": "^2.0.22",
+    "process": "^0.11.10",
+    "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "test": "ava",
+    "dev": "nodemon --watch './index.ts' --exec ts-node ./dev.ts",
+    "dev:front": "parcel serve ./client/index.html",
+    "build:front": "parcel build ./client/index.html",
+    "build:back": "tsc",
+    "build": "yarn build:front && yarn build:back",
+    "start": "node ./index.js"
+  },
+  "dependencies": {
+    "@vaadin/router": "^1.7.5",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "firebase": "8.7.1",
+    "firebase-admin": "^11.8.0",
+    "lodash": "^4.17.21",
+    "parcel": "^2.8.3",
+    "uuid": "^9.0.0"
+  }
+}
